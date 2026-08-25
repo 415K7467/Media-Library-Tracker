@@ -71,5 +71,3 @@ The code is written in OOP: `MediaItem` encapsulates a single catalog entry with
 properties, and `MediaLibrary` encapsulates the collection, persistence and querying logic. The
 GUI layer only calls into these classes and never touches the JSON file directly.
 
-## Estimated time to work
-2 weeks
