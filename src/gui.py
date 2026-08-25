@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import os
 import tkinter as tk
-from tkinter import filedialog, messagebox, ttk
+from tkinter import filedialog, font, messagebox, ttk
 from typing import Optional
 
 from media_item import Category, MediaItem, Status
@@ -148,6 +148,10 @@ class MediaLibraryApp(tk.Tk):
     # Layout
     # ------------------------------------------------------------------
     def _build_layout(self) -> None:
+        style = ttk.Style(self)
+        row_font = font.nametofont("TkDefaultFont")
+        style.configure("Treeview", rowheight=row_font.metrics("linespace") + 10)
+
         search_frame = tk.Frame(self)
         search_frame.pack(fill="x", padx=8, pady=(6, 2))
 
